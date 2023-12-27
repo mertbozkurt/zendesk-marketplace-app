@@ -1,0 +1,11 @@
+.div-wrapper {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.div-wrapper .icon-20-line-black-xmark-1 {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}

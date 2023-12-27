@@ -1,0 +1,1 @@
+export { IconSolidBlack } from "./IconSolidBlack";

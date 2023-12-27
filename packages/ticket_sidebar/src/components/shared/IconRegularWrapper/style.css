@@ -1,0 +1,11 @@
+.icon-regular-wrapper {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.icon-regular-wrapper .icon-20-line-black-circleplus {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}

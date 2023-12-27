@@ -1,0 +1,47 @@
+{
+	"name": "Pisano CX",
+	"author": {
+		"name": "Mert Bozkurt",
+		"email": "mert.bozkurt@pisano.com",
+		"url": "https://www.linkedin.com/in/mert-bozkurt/"
+	},
+	"defaultLocale": "en",
+	"private": true,
+	"location": {
+		"support": {
+			"ticket_sidebar": {
+				"url": "assets/ticket_sidebar/index.html",
+				"size": {
+					"height": "500px",
+					"width": "340px"
+				},
+				"flexible": true
+			},
+			"organization_sidebar": {
+				"url": "assets/ticket_sidebar/index.html",
+				"flexible": true
+			},
+			"new_ticket_sidebar": {
+				"url": "assets/ticket_sidebar/index.html",
+				"flexible": true,
+				"dev:url": "localhost",
+				"dev:port": "3000"
+			},
+			"nav_bar": {
+				"url": "assets/nav_bar/index.html",
+				"dev:url": "localhost",
+				"dev:port": "3001"
+			}
+		}
+	},
+	"parameters": [
+		{
+		  "name": "token",
+		  "type": "text",
+		  "required": true
+		}
+	  ],
+	"version": "1.0.0",
+	"frameworkVersion": "2.0"
+}
+

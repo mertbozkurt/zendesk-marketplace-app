@@ -1,0 +1,1 @@
+export { EkranReportfull } from "./EkranReportfull";

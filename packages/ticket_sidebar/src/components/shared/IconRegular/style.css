@@ -1,0 +1,12 @@
+.icon-regular {
+  align-items: flex-start;
+  display: inline-flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.icon-regular .icon-line-black {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}

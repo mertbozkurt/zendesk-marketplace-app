@@ -1,0 +1,1 @@
+export { IconChannelSms } from "./IconChannelSms";

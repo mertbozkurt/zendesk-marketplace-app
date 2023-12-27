@@ -1,0 +1,33 @@
+.frame-small-off {
+  align-items: center;
+  background-color: var(--customcolorsdarkprimary-dark);
+  border-radius: 4px;
+  box-shadow: var(--elevation-6);
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.frame-small-off .type-basic {
+  align-items: flex-start;
+  background-color: var(--customcolorsdarkprimary-dark);
+  border-radius: 2px;
+  box-shadow: var(--elevation-elevation-1);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 2px 6px;
+  position: relative;
+}
+
+.frame-small-off .email-share {
+  color: var(--customcolorslightlight-1);
+  font-family: "Poppins", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-top: -1px;
+  position: relative;
+  width: 59px;
+}

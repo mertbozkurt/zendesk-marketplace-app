@@ -1,0 +1,158 @@
+.button-default {
+  all: unset;
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.button-default .button {
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-default .icon-regular-instance {
+  flex: 0 0 auto !important;
+}
+
+.button-default .icon-20-line-black-angledown-64 {
+  height: 22px !important;
+  position: relative !important;
+  width: 22px !important;
+}
+
+.button-default .icon-20-regular-black-check-instance {
+  flex: 0 0 auto !important;
+  height: 22px !important;
+}
+
+.button-default.disabled {
+  background-color: var(--customcolorsgraygray-1);
+}
+
+.button-default.outline {
+  border: 1px solid;
+  border-color: var(--customcolorsblueprimary-blue);
+}
+
+.button-default.sixteen {
+  border-radius: 16px;
+}
+
+.button-default.thirty-two {
+  border-radius: 32px;
+}
+
+.button-default.four {
+  border-radius: 4px;
+}
+
+.button-default.SM {
+  height: 36px;
+  padding: 0px 18px;
+}
+
+.button-default.eight {
+  border-radius: 8px;
+}
+
+.button-default.XS {
+  height: 30px;
+  padding: 3px 14px;
+}
+
+.button-default.MD {
+  height: 42px;
+  padding: 0px 22px;
+}
+
+.button-default.LG {
+  padding: 13px 26px;
+}
+
+.button-default.XL {
+  padding: 18px 32px;
+}
+
+.button-default.default {
+  border: 1px solid;
+  border-color: var(--customcolorsgraygray-1);
+}
+
+.button-default.two {
+  border-radius: 2px;
+}
+
+.button-default.filled {
+  background-color: var(--customcolorsblueprimary-blue);
+}
+
+.button-default.disabled .button {
+  color: var(--customcolorsgraygray-4);
+}
+
+.button-default.outline .button {
+  color: var(--customcolorsblueprimary-blue);
+}
+
+.button-default.XS .button {
+  font-family: var(--label-xs-medium-font-family);
+  font-size: var(--label-xs-medium-font-size);
+  font-style: var(--label-xs-medium-font-style);
+  font-weight: var(--label-xs-medium-font-weight);
+  letter-spacing: var(--label-xs-medium-letter-spacing);
+  line-height: var(--label-xs-medium-line-height);
+}
+
+.button-default.SM .button {
+  font-family: var(--label-sm-medium-font-family);
+  font-size: var(--label-sm-medium-font-size);
+  font-style: var(--label-sm-medium-font-style);
+  font-weight: var(--label-sm-medium-font-weight);
+  letter-spacing: var(--label-sm-medium-letter-spacing);
+  line-height: var(--label-sm-medium-line-height);
+}
+
+.button-default.LG .button {
+  font-family: var(--label-lg-medium-font-family);
+  font-size: var(--label-lg-medium-font-size);
+  font-style: var(--label-lg-medium-font-style);
+  font-weight: var(--label-lg-medium-font-weight);
+  letter-spacing: var(--label-lg-medium-letter-spacing);
+  line-height: var(--label-lg-medium-line-height);
+  margin-top: -1px;
+}
+
+.button-default.XL .button {
+  font-family: var(--label-xl-medium-font-family);
+  font-size: var(--label-xl-medium-font-size);
+  font-style: var(--label-xl-medium-font-style);
+  font-weight: var(--label-xl-medium-font-weight);
+  letter-spacing: var(--label-xl-medium-letter-spacing);
+  line-height: var(--label-xl-medium-line-height);
+  margin-top: -1px;
+}
+
+.button-default.subtle .button {
+  color: var(--customcolorsblueprimary-blue);
+}
+
+.button-default.MD .button {
+  font-family: var(--label-md-medium-font-family);
+  font-size: var(--label-md-medium-font-size);
+  font-style: var(--label-md-medium-font-style);
+  font-weight: var(--label-md-medium-font-weight);
+  letter-spacing: var(--label-md-medium-letter-spacing);
+  line-height: var(--label-md-medium-line-height);
+}
+
+.button-default.default .button {
+  color: var(--customcolorsgrayprimary-gray);
+}
+
+.button-default.filled .button {
+  color: var(--customcolorslightlight-1);
+}

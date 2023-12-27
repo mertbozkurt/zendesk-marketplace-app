@@ -1,0 +1,11 @@
+.icon-20-regular-black-bell {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.icon-20-regular-black-bell .icon-20-line-black-bell-126 {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}

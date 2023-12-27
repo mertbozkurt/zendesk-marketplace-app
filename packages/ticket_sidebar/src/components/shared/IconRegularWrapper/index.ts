@@ -1,0 +1,1 @@
+export { IconRegularWrapper } from "./IconRegularWrapper";

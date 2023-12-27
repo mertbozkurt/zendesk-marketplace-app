@@ -1,0 +1,32 @@
+.state-default-size-XXS-radius-XL-color-red-type-light-iconright-off-iconleft-off {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.state-default-size-XXS-radius-XL-color-red-type-light-iconright-off-iconleft-off .type-no-icon-action-2 {
+  align-items: center;
+  background-color: var(--customcolorsredred-1);
+  border-radius: 100px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 3px;
+  height: 16px;
+  padding: 4px 7px;
+  position: relative;
+}
+
+.state-default-size-XXS-radius-XL-color-red-type-light-iconright-off-iconleft-off .x-xsmall-2 {
+  color: var(--customcolorsredred-10);
+  font-family: var(--other-tiny-bold-font-family);
+  font-size: var(--other-tiny-bold-font-size);
+  font-style: var(--other-tiny-bold-font-style);
+  font-weight: var(--other-tiny-bold-font-weight);
+  letter-spacing: var(--other-tiny-bold-letter-spacing);
+  line-height: var(--other-tiny-bold-line-height);
+  margin-bottom: -7px;
+  margin-top: -9px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

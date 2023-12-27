@@ -1,0 +1,37 @@
+{
+  "name": "Pisano",
+  "author": {
+    "name": "Mert Bozkurt",
+    "email": "dev@pisano.com",
+    "url": "https://www.pisano.com/"
+  },
+  "defaultLocale": "en",
+  "private": false,
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "assets/ticket_sidebar/index.html",
+        "flexible": true
+      }
+    }
+  },
+  "version": "1.0.0",
+  "frameworkVersion": "2.0",
+  "parameters": [
+    {
+      "name": "token",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "domain",
+      "type": "text",
+      "required": true
+    }
+  ]
+}

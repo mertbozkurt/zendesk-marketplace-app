@@ -1,0 +1,12 @@
+.icon-20-regular-black-check {
+  align-items: flex-start;
+  display: inline-flex;
+  height: 20px;
+  position: relative;
+}
+
+.icon-20-regular-black-check .icon-20-line-black-check-126 {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}

@@ -1,0 +1,1 @@
+export { IconRegular } from "./IconRegular";

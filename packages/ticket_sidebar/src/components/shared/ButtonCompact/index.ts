@@ -1,0 +1,1 @@
+export { ButtonCompact } from "./ButtonCompact";

@@ -1,0 +1,200 @@
+.button-compact {
+  all: unset;
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  gap: 7px;
+  justify-content: center;
+  position: relative;
+}
+
+.button-compact .instance-node {
+  flex: 0 0 auto !important;
+  height: 22px !important;
+}
+
+.button-compact .class-9 {
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  height: 22px !important;
+  justify-content: center !important;
+}
+
+.button-compact .icon-20-regular-black-bell-instance {
+  flex: 0 0 auto !important;
+}
+
+.button-compact .button-2 {
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-compact.property-1-0-disabled {
+  background-color: var(--customcolorsgraygray-1);
+}
+
+.button-compact.property-1-0-outline {
+  border: 1px solid;
+  border-color: var(--customcolorsblueprimary-blue);
+}
+
+.button-compact.radius-sixteen {
+  border-radius: 16px;
+}
+
+.button-compact.radius-thirty-two {
+  border-radius: 32px;
+}
+
+.button-compact.radius-four {
+  border-radius: 4px;
+}
+
+.button-compact.size-0-SM {
+  height: 26px;
+  padding: 1px 8px;
+}
+
+.button-compact.radius-eight {
+  border-radius: 8px;
+}
+
+.button-compact.size-0-XS {
+  height: 22px;
+  padding: 0px 6px;
+}
+
+.button-compact.size-0-MD {
+  height: 30px;
+}
+
+.button-compact.size-0-LG {
+  height: 34px;
+  padding: 5px 12px;
+}
+
+.button-compact.size-0-XL {
+  height: 40px;
+  padding: 8px 14px;
+}
+
+.button-compact.property-1-0-default {
+  border: 1px solid;
+  border-color: var(--customcolorsgraygray-1);
+}
+
+.button-compact.radius-two {
+  border-radius: 2px;
+}
+
+.button-compact.property-1-0-filled {
+  background-color: var(--customcolorsblueprimary-blue);
+}
+
+.button-compact.size-0-MD.property-1-0-outline {
+  padding: 3px 10px;
+}
+
+.button-compact.property-1-0-default.size-0-MD {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.property-1-0-disabled {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.radius-two {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.radius-sixteen {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.radius-eight {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.radius-zero {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.property-1-0-subtle {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.radius-thirty-two {
+  padding: 3px 10px;
+}
+
+.button-compact.size-0-MD.property-1-0-filled.radius-four {
+  padding: 3px 14px 3px 10px;
+}
+
+.button-compact.property-1-0-disabled .button-2 {
+  color: var(--customcolorsgraygray-4);
+}
+
+.button-compact.property-1-0-outline .button-2 {
+  color: var(--customcolorsblueprimary-blue);
+}
+
+.button-compact.size-0-XS .button-2 {
+  font-family: var(--label-xs-medium-font-family);
+  font-size: var(--label-xs-medium-font-size);
+  font-style: var(--label-xs-medium-font-style);
+  font-weight: var(--label-xs-medium-font-weight);
+  letter-spacing: var(--label-xs-medium-letter-spacing);
+  line-height: var(--label-xs-medium-line-height);
+}
+
+.button-compact.size-0-SM .button-2 {
+  font-family: var(--label-sm-medium-font-family);
+  font-size: var(--label-sm-medium-font-size);
+  font-style: var(--label-sm-medium-font-style);
+  font-weight: var(--label-sm-medium-font-weight);
+  letter-spacing: var(--label-sm-medium-letter-spacing);
+  line-height: var(--label-sm-medium-line-height);
+}
+
+.button-compact.size-0-LG .button-2 {
+  font-family: var(--label-lg-medium-font-family);
+  font-size: var(--label-lg-medium-font-size);
+  font-style: var(--label-lg-medium-font-style);
+  font-weight: var(--label-lg-medium-font-weight);
+  letter-spacing: var(--label-lg-medium-letter-spacing);
+  line-height: var(--label-lg-medium-line-height);
+  margin-top: -1px;
+}
+
+.button-compact.size-0-XL .button-2 {
+  font-family: var(--label-xl-medium-font-family);
+  font-size: var(--label-xl-medium-font-size);
+  font-style: var(--label-xl-medium-font-style);
+  font-weight: var(--label-xl-medium-font-weight);
+  letter-spacing: var(--label-xl-medium-letter-spacing);
+  line-height: var(--label-xl-medium-line-height);
+  margin-top: -1px;
+}
+
+.button-compact.property-1-0-subtle .button-2 {
+  color: var(--customcolorsblueprimary-blue);
+}
+
+.button-compact.size-0-MD .button-2 {
+  font-family: var(--label-md-medium-font-family);
+  font-size: var(--label-md-medium-font-size);
+  font-style: var(--label-md-medium-font-style);
+  font-weight: var(--label-md-medium-font-weight);
+  letter-spacing: var(--label-md-medium-letter-spacing);
+  line-height: var(--label-md-medium-line-height);
+}
+
+.button-compact.property-1-0-default .button-2 {
+  color: var(--customcolorsgrayprimary-gray);
+}
+
+.button-compact.property-1-0-filled .button-2 {
+  color: var(--customcolorslightlight-1);
+}

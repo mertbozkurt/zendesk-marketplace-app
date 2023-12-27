@@ -1,0 +1,48 @@
+.state-default-size {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.state-default-size .type-no-icon-action {
+  align-items: center;
+  background-color: var(--customcolorsgreengreen-1);
+  border-radius: 100px;
+  display: flex;
+  gap: 3px;
+  height: 16px;
+  padding: 4px 5px 4px 7px;
+  position: relative;
+  width: 39px;
+}
+
+.state-default-size .icon-20-regular-black-xmark {
+  align-items: center !important;
+  display: flex !important;
+  height: 14px !important;
+  justify-content: center !important;
+  margin-bottom: -3px !important;
+  margin-top: -3px !important;
+  width: 14px !important;
+}
+
+.state-default-size .text-wrapper {
+  color: var(--customcolorsgreenprimary-green);
+  font-family: var(--other-tiny-bold-font-family);
+  font-size: var(--other-tiny-bold-font-size);
+  font-style: var(--other-tiny-bold-font-style);
+  font-weight: var(--other-tiny-bold-font-weight);
+  height: 15px;
+  letter-spacing: var(--other-tiny-bold-letter-spacing);
+  line-height: var(--other-tiny-bold-line-height);
+  margin-bottom: -2.5px;
+  margin-right: -5px;
+  margin-top: -4.5px;
+  position: relative;
+  white-space: nowrap;
+  width: 15px;
+}
+
+.state-default-size .icon-20-solid-black-trendup {
+  flex: 0 0 auto !important;
+}

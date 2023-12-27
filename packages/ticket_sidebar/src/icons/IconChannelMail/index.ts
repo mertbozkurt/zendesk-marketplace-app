@@ -1,0 +1,1 @@
+export { IconChannelMail } from "./IconChannelMail";

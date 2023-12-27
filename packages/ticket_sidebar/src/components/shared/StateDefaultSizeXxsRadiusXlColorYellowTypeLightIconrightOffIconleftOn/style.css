@@ -1,0 +1,54 @@
+.state-default-size-XXS-radius-XL-color-yellow-type-light-iconright-off-iconleft-on {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.state-default-size-XXS-radius-XL-color-yellow-type-light-iconright-off-iconleft-on .type-no-icon-action-4 {
+  align-items: center;
+  background-color: var(--customcolorsyellowyellow-1);
+  border-radius: 100px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 3px;
+  height: 16px;
+  padding: 4px 7px 4px 5px;
+  position: relative;
+}
+
+.state-default-size-XXS-radius-XL-color-yellow-type-light-iconright-off-iconleft-on
+  .icon-20-regular-black-xmark-instance {
+  align-items: center !important;
+  display: flex !important;
+  height: 14px !important;
+  justify-content: center !important;
+  margin-bottom: -3px !important;
+  margin-top: -3px !important;
+  width: 14px !important;
+}
+
+.state-default-size-XXS-radius-XL-color-yellow-type-light-iconright-off-iconleft-on .xxsmall {
+  color: var(--customcolorsyellowyellow-7);
+  font-family: var(--other-tiny-bold-font-family);
+  font-size: var(--other-tiny-bold-font-size);
+  font-style: var(--other-tiny-bold-font-style);
+  font-weight: var(--other-tiny-bold-font-weight);
+  letter-spacing: var(--other-tiny-bold-letter-spacing);
+  line-height: var(--other-tiny-bold-line-height);
+  margin-bottom: -7px;
+  margin-top: -9px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.state-default-size-XXS-radius-XL-color-yellow-type-light-iconright-off-iconleft-on .icon-solid-black-instance {
+  flex: 0 0 auto !important;
+}
+
+.state-default-size-XXS-radius-XL-color-yellow-type-light-iconright-off-iconleft-on
+  .icon-20-solid-black-trendup-instance {
+  height: 13px !important;
+  position: relative !important;
+  width: 13px !important;
+}

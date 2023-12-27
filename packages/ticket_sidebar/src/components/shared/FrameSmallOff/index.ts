@@ -1,0 +1,1 @@
+export { FrameSmallOff } from "./FrameSmallOff";

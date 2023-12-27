@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "Pisano",
+  "version": "1.0.0",
+  "description": "Pisano CX Tool for Zendesk apps",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "open": "open https://d3v5878-he.zendesk.com/agent/tickets/1?zcli_apps=true",
+    "build": "node scripts/build.mjs prod ticket_sidebar",
+    "zcli:package": "zcli apps:package dist",
+    "zcli:start": "node  --inspect scripts/build.mjs local ticket_sidebar nav_bar && zcli apps:server dist",
+    "ticket_sidebar:start": "node --inspect scripts/run.mjs ticket_sidebar",
+    "nav_bar:start": "node scripts/run.mjs nav_bar"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "yarn@1.22.21",
+  "devDependencies": {
+    "minimist": "^1.2.6"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react-notifications": "^1.7.4",
+    "react-select": "^5.7.5",
+    "react-toastify": "^9.1.3",
+    "yarn": "^1.22.21"
+  }
+}
