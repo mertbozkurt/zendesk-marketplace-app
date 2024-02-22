@@ -9,6 +9,7 @@ import Select from 'react-select';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import zafClient from "@app/zendesk/sdk";
+import { Icon20RegularBlackBell } from "../shared/Icon20RegularBlackBell";
 
 
 interface Props {
@@ -49,6 +50,8 @@ export const Tabs = ({ token, message,domain
     const [selectedLinkOption, setSelectedLinkOption] = useState({ channelType: string, label: string, value: string });
     const [isOptionSelected, setOptionSelected] = useState(false);
     const [isLinkOptionSelected, setLinkOptionSelected] = useState(false);
+    const [sendSurveyloader ,setSendSurveyloader] = useState(false);
+    const [addSurveyloader ,setaddSurveyloader] = useState(false);
 
 
 
@@ -71,6 +74,12 @@ export const Tabs = ({ token, message,domain
 
     const handleTabClick = useCallback(async (newTabIndex: any) => {
 
+        if(newTabIndex ===0){
+            setSendSurveyloader(true)
+        }else{
+            setaddSurveyloader(true)
+        }
+      
         const options = {
             url: `${domain}/v1/complete_login?token=` + token,
             type: "POST",
@@ -93,6 +102,7 @@ export const Tabs = ({ token, message,domain
               await zafClient.request(options).then(async (response: any) => {
                 const json = await response;
                 if (newTabIndex === 0) {
+                
                     SURVEYS = json.data.map((item: any) => {
                         return {
                             "channelType": "email",
@@ -101,6 +111,7 @@ export const Tabs = ({ token, message,domain
                         };
                     });
                 } else {
+                   
                     SURVEYS = json.map((item: any) => {
                         return {
                             "channelType": "link",
@@ -123,6 +134,8 @@ export const Tabs = ({ token, message,domain
                 });
                 
               })
+              setSendSurveyloader(false);
+              setaddSurveyloader(false)
           })   
     }, [requester, token]);
 
@@ -193,7 +206,7 @@ export const Tabs = ({ token, message,domain
         const data = {
             ticket: {
                 comment: {
-                    html_body: "<p>" + message + ` <a href=\"${domain}/web_feedback?node_id=` + selectedLinkOption.value + "&responses=" + response(ticketId, requester.email) + "\">Link</a></p>",
+                    html_body: "<p>" + message + ` <a href=\"${domain.replace("api.", "web.")}/web_feedback?node_id=` + selectedLinkOption.value + "&responses=" + response(ticketId, requester.email) + "\">Link</a></p>",
                     public: true
                 }
             }
@@ -239,13 +252,13 @@ export const Tabs = ({ token, message,domain
                     className="button-default-instance"
                     divClassName="design-component-instance-node"
                     label="Send Survey"
-                    override={<IconRegular
-                        className="icon-20-regular-black-plus" icon={undefined} />}
+                    override={<Icon20RegularBlackBell
+                        className="icon-20-regular-black-bell" icon={undefined}  />}
                     property1={tabIndex === 0 ? "filled" : "outline"}
                     radius="four"
                     showRightIcon={false}
                     size="SM"
-                    clickFunc={() => handleTabClick(0)} showLeftIcon={true} showText={true} />
+                    clickFunc={() => handleTabClick(0)} showLeftIcon={true} showText={true} showLoader={sendSurveyloader} />
 
                 <ButtonDefault
                     className="button-default-instance"
@@ -257,7 +270,7 @@ export const Tabs = ({ token, message,domain
                     radius="four"
                     showRightIcon={false}
                     size="SM"
-                    clickFunc={() => handleTabClick(1)} showLeftIcon={true} showText={true} />
+                    clickFunc={() => handleTabClick(1)} showLeftIcon={true} showText={true} showLoader={addSurveyloader} />
             </div>
             <div className="frame-3-1">
                 {tabIndex === 1 ? (
@@ -295,7 +308,7 @@ export const Tabs = ({ token, message,domain
                         radius="four"
                         showRightIcon={false}
                         size="LG"
-                        clickFunc={() => handleSendClick(selectedOption)} showLeftIcon={true} showText={true} />
+                        clickFunc={() => handleSendClick(selectedOption)} showLeftIcon={true} showText={true} showLoader={false} />
                 ) : null}
             </div>
             <div className="frame-3-1">
@@ -309,7 +322,7 @@ export const Tabs = ({ token, message,domain
                         radius="four"
                         showRightIcon={false}
                         size="LG"
-                        clickFunc={() => handleAddClick(selectedLinkOption)} showLeftIcon={true} showText={true}
+                        clickFunc={() => handleAddClick(selectedLinkOption)} showLeftIcon={true} showText={true} showLoader={false}
                     />
                 ) : null}
             </div>

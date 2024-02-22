@@ -9,7 +9,7 @@ import "./style.css";
 
 interface Props {
   className: any;
-  icon: JSX.Element;
+  icon:any;
 }
 
 export const Icon20RegularBlackBell = ({

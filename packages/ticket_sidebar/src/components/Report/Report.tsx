@@ -1,7 +1,7 @@
 
 
 import PropTypes, { object } from "prop-types";
-import React, { useEffect, useState, useCallback } from "react";
+import React, {  useState, useCallback } from "react";
 import { IconSolidBlack } from "../shared/IconSolidBlack";
 import { StateDefaultSizeWrapper } from "../shared/StateDefaultSizeWrapper";
 import { StateDefaultSizeXxsRadiusXlColorYellowTypeLightIconrightOffIconleftOn } from "../shared/StateDefaultSizeXxsRadiusXlColorYellowTypeLightIconrightOffIconleftOn";

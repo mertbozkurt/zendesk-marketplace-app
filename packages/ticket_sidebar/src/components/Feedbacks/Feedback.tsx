@@ -29,6 +29,7 @@ export const Feedback = ({ firstLetter, name, feedbackDate, feedbackTime, feedba
         <div className="frame-wrapper">
             <div className="frame-28">
                 <div className="group-2">
+                       
                     <div className="frame-29">
                         <div className="profile">
                             <div className="overlap-group-2">
@@ -37,6 +38,7 @@ export const Feedback = ({ firstLetter, name, feedbackDate, feedbackTime, feedba
                         </div>
                         <div className="text-wrapper-16">{name}</div>
                     </div>
+                  
                     <div className="frame-30">
                         <p className="july-PM">
                             <span className="text-wrapper-17">{feedbackDate}</span>
@@ -57,6 +59,7 @@ export const Feedback = ({ firstLetter, name, feedbackDate, feedbackTime, feedba
 
                         </div>
                     </div>
+                   
                 </div>
                 <div className="frame-32">
                     <div className="frame-6">

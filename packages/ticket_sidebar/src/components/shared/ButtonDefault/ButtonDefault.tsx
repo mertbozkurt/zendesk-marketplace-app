@@ -22,7 +22,8 @@ interface Props {
   className: any;
   override?: JSX.Element;
   divClassName: any;
-  clickFunc:   Function | undefined 
+  clickFunc:   Function | undefined ;
+  showLoader: boolean;
 }
 // const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
 //   // Your event handling logic here
@@ -40,7 +41,8 @@ export const ButtonDefault = ({
   className,
   override = <Icon20RegularBlackCheck className="icon-20-regular-black-check-instance" icon={<IconLineBlack />} />,
   divClassName,
-  clickFunc 
+  clickFunc,
+  showLoader, 
 }: Props): JSX.Element => {
   return (
     <button className={`button-default ${property1} ${radius} ${size} ${className}`} onClick={clickFunc}>
@@ -77,6 +79,7 @@ export const ButtonDefault = ({
           }
         />
       )}
+      {showLoader && <div className= "loader"> </div>}
     </button>
   );
 };
@@ -89,5 +92,6 @@ ButtonDefault.propTypes = {
   property1: PropTypes.oneOf(["default", "filled", "outline", "subtle", "disabled"]),
   radius: PropTypes.oneOf(["sixteen", "zero", "two", "thirty-two", "four", "eight"]),
   size: PropTypes.oneOf(["MD", "SM", "LG", "XL", "XS"]),
-  clickFunc: PropTypes.func
+  clickFunc: PropTypes.func,
+  showLoader: PropTypes.bool
 };

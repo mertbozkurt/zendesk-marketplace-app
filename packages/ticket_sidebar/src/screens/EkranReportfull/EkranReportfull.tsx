@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { ButtonDefault } from "../../components/shared/ButtonDefault";
 import { Tabs } from "../../components/Tabs/Tabs";
 import { Report } from "../../components/Report/Report";
@@ -57,7 +57,7 @@ export const EkranReportfull = ({
   }]);
 
 
-  const metadata = useCallback(async () => {
+  const metadata = useMemo(async () => {
     const metadata: any = await zafClient.metadata();
 
 
@@ -179,7 +179,7 @@ export const EkranReportfull = ({
     return arr.filter((item,
       index) => arr.indexOf(item) === index);
   }
-  metadata()
+  //metadata()
 
   return (
     <div key="ekran-reportfull" className="ekran-reportfull">
@@ -206,7 +206,8 @@ export const EkranReportfull = ({
             radius="zero"
             showLeftIcon={false}
             showRightIcon={false}
-            size="SM" showText={false} clickFunc={undefined} />
+            size="SM" showText={false} clickFunc={undefined}
+            showLoader={false} />
         </div>
       </div>
     </div>

@@ -1,0 +1,16 @@
+.icon-support {
+  align-items: center;
+  display: flex;
+  gap: 6.64px;
+  height: 20px;
+  justify-content: center;
+  padding: 0px 1.33px;
+  position: relative;
+  width: 20px;
+}
+
+.icon-support .square-list-regular {
+  height: 17.92px;
+  position: relative;
+  width: 15.68px;
+}
