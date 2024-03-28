@@ -40,11 +40,12 @@ export const Report = ({
                 type: "GET",
                 cors: false,
                 headers: {
-                    'authorization': "Token token=" + token,
+                    'authorization': "Token token={{setting.apiToken}}" ,
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
                     'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-                }
+                },
+                secure: true
             };
             await zafClient.request(options).then(async (response: any) => {
                 const json = await response;
@@ -66,11 +67,12 @@ export const Report = ({
                     type: "GET",
                     cors: false,
                     headers: {
-                        'authorization': "Token token=" + token,
+                        'authorization': "Token token={{setting.apiToken}}" ,
                         'Access-Control-Allow-Origin': '*',
                         'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
                         'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-                    }
+                    },
+                    secure: true
                 };
                 await zafClient.request(options).then(async (response: any) => {
                     const json = await response;
@@ -94,7 +96,7 @@ export const Report = ({
         const { ticket } = await zafClient.get("ticket");
         const response = await fetch(`${domain}/v1/customers?search_string=` + ticket.requester.email + "&status=paying", {
             headers: {
-                'authorization': `Token token=${token}`,
+                'authorization': `Token token={{setting.apiToken}}`,
                 'Access-Control-Allow-Origin': '*'
             }
         });

@@ -24,7 +24,7 @@ async function fetchMetadata() {
   metadata = await zafClient.metadata();
 }
 await fetchMetadata();
-const token = metadata.settings.token;
+const token = metadata.settings.apiToken;
 const message = metadata.settings.message;
 const domain = metadata.settings.domain;
 
@@ -68,11 +68,12 @@ export const EkranReportfull = ({
       type: "GET",
       cors: false,
       headers: {
-        'authorization': "Token token=" + token,
+        'authorization': "Token token={{setting.apiToken}}",
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
         'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-      }
+      },
+      secure: true
     };
     let creatorJson = { customers: [{ "id": 1 }] }
     await zafClient.request(options).then(async (response: any) => {
@@ -85,11 +86,12 @@ export const EkranReportfull = ({
           type: "GET",
           cors: false,
           headers: {
-            'authorization': "Token token=" + token,
+            'authorization': "Token token={{setting.apiToken}}",
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
             'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-          }
+          },
+          secure: true
         };
         await zafClient.request(options).then(async (response: any) => {
 
@@ -131,11 +133,13 @@ export const EkranReportfull = ({
               type: "GET",
               cors: false,
               headers: {
-                'authorization': "Token token=" + token,
+                'authorization': "Token token={{setting.apiToken}}",
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
                 'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-              }
+              },
+              secure:true
+
             };
             await zafClient.request(options).then(async (response: any) => {
               const json = await response;

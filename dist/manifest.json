@@ -1,8 +1,8 @@
 {
 	"name": "Pisano",
 	"author": {
-		"name": "Mert Bozkurt",
-		"email": "dev@pisano.com",
+		"name": "Pisano Customer Success Team",
+		"email": "support@pisano.com",
 		"url": "https://www.pisano.com/"
 	},
 	"defaultLocale": "en",
@@ -17,11 +17,15 @@
 	},
 	"version": "1.0.0",
 	"frameworkVersion": "2.0",
+	"domainWhitelist": [
+		"{{setting.domain}}"
+	],
 	"parameters": [
 		{
-			"name": "token",
+			"name": "apiToken",
 			"type": "text",
-			"required": true
+			"required": true,
+			"secure": true
 		},
 		{
 			"name": "message",

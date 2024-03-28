@@ -81,12 +81,13 @@ export const Tabs = ({ token, message,domain
         }
       
         const options = {
-            url: `${domain}/v1/complete_login?token=` + token,
+            url: `${domain}/v1/complete_login?token={{setting.apiToken}}`,
             type: "POST",
             cors: false,
             headers: {
               'authorization': "Token token=" + token
-            }
+            },
+            secure: true
           };
           await zafClient.request(options).then(async (adminUserResponse: any) => {
 
@@ -96,8 +97,9 @@ export const Tabs = ({ token, message,domain
                 type: "GET",
                 cors: false,
                 headers: {
-                  'authorization': "Token token=" + token
-                }
+                  'authorization': "Token token={{setting.apiToken}}"
+                },
+                secure: true
               };
               await zafClient.request(options).then(async (response: any) => {
                 const json = await response;
@@ -151,34 +153,34 @@ export const Tabs = ({ token, message,domain
     }, [selectedLinkOption])
 
     const handleSendClick = useCallback(async (send: any) => {
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", 'Token token=' + token);
-        myHeaders.append("Content-Type", "application/json");
-        
-        let json: any = {
-            "emails": [],
-            "custom_attributes": {},
-            "transactional_data": {}
-        }
-        json.emails.push(requester.email);
-        json.custom_attributes[requester.email] = {
-            "name": requester.name,
-            "zendeskID": requester.id
-        };
-        var raw = JSON.stringify(json)
+       
+    
+        const options = {
+            url: `${domain}/v1/email_campaigns/`+ send.value + "/email_sharings",
+            type: "POST",
+            cors: false,
+            headers: {
+                'authorization': "Token token={{setting.apiToken}}",
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+                'content-type':'application/json'
+            },
+            accepts: "application/json",
+            data: JSON.stringify({
+                emails: [requester.email],
+                custom_attributes: {
+                    name: requester.name,
+                    zendeskID: requester.id.toString()
+                },
+                transactional_data: {}
+            }),
+            secure: true
+            };
+        await zafClient.request(options).then((response) => {
+            console.log(response);
+          });
 
-        var requestOptions: RequestInit = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-        };
-
-        //todo update fetch request with new version
-        fetch(`${domain}/v1/email_campaigns/` + send.value + "/email_sharings", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
 
         setTabIndex(3);
         toast.info("Survey has been sent to " + requester.email, {

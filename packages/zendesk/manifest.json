@@ -17,11 +17,13 @@
   },
   "version": "1.0.0",
   "frameworkVersion": "2.0",
+  "domainWhitelist": [ "{{setting.domain}}" ],
   "parameters": [
     {
-      "name": "token",
+      "name": "apiToken",
       "type": "text",
-      "required": true
+      "required": true,
+      "secure": true
     },
     {
       "name": "message",
